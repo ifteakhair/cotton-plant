@@ -66,6 +66,7 @@ def predict():
 
         return render_template(output_page, pred_output=pred, user_image=file_path)
 
+ip_address = '0.0.0.0'
 def parse_args():
     parser = argparse.ArgumentParser(description='Run Flask app with a custom port')
     parser.add_argument('--port', type=int, default=80, help='Port to run the app on')
@@ -75,4 +76,4 @@ def parse_args():
 # For local system & cloud
 if __name__ == "__main__":
     args = parse_args()
-    app.run(port=args.port)
+    app.run(port=args.port,host=ip_address)
