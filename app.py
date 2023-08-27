@@ -1,6 +1,6 @@
 # Import necessary libraries
 from flask import Flask, render_template, request
-
+import argparse
 import numpy as np
 import os
 import tensorflow as tf
@@ -66,7 +66,13 @@ def predict():
 
         return render_template(output_page, pred_output=pred, user_image=file_path)
 
+def parse_args():
+    parser = argparse.ArgumentParser(description='Run Flask app with a custom port')
+    parser.add_argument('--port', type=int, default=80, help='Port to run the app on')
+    return parser.parse_args()
+
 
 # For local system & cloud
 if __name__ == "__main__":
-    app.run(threaded=False, )
+    args = parse_args()
+    app.run(port=args.port)
