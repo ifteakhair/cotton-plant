@@ -11,7 +11,7 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@700&display=swap" rel="stylesheet">
 
-    <title>COTTON PLANT DISEASE PREDICTION</title>
+    <title>CITRUS LEAF DISEASE DETECTION</title>
 
     <style>
         * {
@@ -22,8 +22,12 @@
 
         }
 
+        body{
+            background:white;
+        }
+
         .carousel-inner img {
-            height: 70vh;
+            height: 100vh;
         }
 
         form {
@@ -54,10 +58,9 @@
         .details h2 {
             /* margin-bottom: 300px; */
             position: relative;
-            top: 100px;
             margin: auto;
-            color: rgb(18, 231, 231);
-            font-size: 3rem;
+            color: black;
+            font-size: 2.5rem;
 
         }
 
@@ -76,21 +79,40 @@
 
         .details h1 {
             color: white;
-            padding: 20px;
+            padding: 10px;
             border-radius: 15px;
             background-color: rgb(45, 47, 49);
         }
 
 
-        .upload {
 
+        .carouselimg{
+            display:flex;
+            object-fit:cover;
+            width:100%;
+        }
+
+        .details {
+            background: linear-gradient(to bottom, #f9f9f9, #e6e6e6);
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .uploadform{
+            display:flex;
+            flex-direction:column;
+            color:white;
+        }
+        .upload {
+            display:flex;
             font-size: 20px;
-            background-color: rgb(255, 252, 252);
+            background-color: #000435;
             border-radius: 20px;
             outline: none;
             width: 315px;
-            color: rgb(0, 0, 0);
+            color: white;
             border: 3px solid rgb(45, 47, 49);
+             box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 
 
 
@@ -98,10 +120,11 @@
 
         ::-webkit-file-upload-button {
             color: white;
-            padding: 20px;
+            padding: 15px;
             border: 2px solid rgb(129, 129, 129);
             background-color: rgb(129, 129, 129);
             border-radius: 15px;
+
 
         }
 
@@ -115,14 +138,14 @@
 
 
         input[type="submit"] {
-            position: absolute;
-            margin-top: 150px;
-            padding: 15px 35px;
-            background-color: white;
-            border-radius: 15px;
-            color: black;
-            font-size: 1.5rem;
-            border: 4px solid rgb(31, 185, 190);
+          position: relative;
+          margin-top: 10px;
+          padding: 10px 25px;
+          background-color: #000435;
+          border-radius: 15px;
+          color: white;
+          font-size: 1.5rem;
+          box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
         }
 
         .carousel-caption {
@@ -185,18 +208,18 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active ">
-                        <img src="/static/images/img1.jpg" class="d-block w-100" alt="...">
+                        <img class ='carouselimg' src="/static/images/background.cms"  alt="...">
 
                         <div class="container">
                             <div class="container background-img3">
                                 <div class="carousel-caption">
 
-                                    <h3>Cotton
-                                        Plant Disease Prediction AI App</h3>
+                                    <h3>
+                                        Citrus Disease Prediction AI App</h3>
                                     <p>
                                         Many veterans said that Deep Learning and AI is a threat to our world, but if we
                                         use it properly, we can do many good things today, we will see a small example
-                                        of this in which we will be in cotton farming
+                                        of this in which we will be in citrus farming
                                         Find out about the disease
                                     </p>
 
@@ -206,16 +229,15 @@
                     </div>
 
                     <div class="carousel-item">
-                        <img src="/static/images/img2.jpg" class="d-block w-100" alt="...">
+                        <img src="/static/images/background2.jpeg" class="d-block carouselimg" alt="...">
                         <div class="container">
                             <div class="carousel-caption">
-                                <h3>कपास पेड़ का रोग का अंदाज और उपाय 
+                                <h3>Leaf Diseases Detection by Image Processing
                                 </h3>
                                 <p>
-                                    कई दिग्गजों ने कहा कि Deep Learning and AI यह हमारी दुनिया के लिए खतरा है लेकिन अगर
-                                    हम इसका सही यूज़ करें तो हम कई अच्छे काम भी कर सकते हैं आज इसी का छोटा सा example
-                                    देखेंगे जिसमें हम कपास की खेती में होने वाले
-                                    रोग के बारे मे पता करेगें</p>
+                                    Producing agricultural products are difficult task as the plant comes to an attack from various micro-organisms, pests and bacterial diseases.
+                                    The symptoms of the attacks are generally distinguished through the leaves, steams or fruit inspection.
+                                    An the image processing techniques used in performing early detection of plant diseases through leaf features inspection is used by our AI model</p>
 
                             </div>
                         </div>
@@ -223,16 +245,13 @@
 
 
                     <div class="carousel-item">
-                        <img src="/static/images/img3.jpg" class="d-block w-100" alt="...">
+                        <img src="/static/images/background3.webp" class="d-flex carouselimg" alt="...">
                         <div class="container">
                             <div class="container ">
                                 <div class="carousel-caption">
                                     <h3>
-                                        कपाशीच्या झाडाच्या रोगाचा अंदाज आणि उपाय </h3>
-                                    <p>गेल्या काही वर्षांपासून
-								 सखोल अभ्यास (Deep Learning) आणि कृत्रिम बुद्धिमत्ता (Artificial Intelligence) हा सर्वात चर्चेचा विषय राहिला आहे, 
-								बरेच दिग्गज लोक म्हणतात की हा आपल्या जगासाठी धोका आहे, परंतु जर आपण त्याचा योग्य वापर केला तर आपण आज बर्‍याच चांगल्या गोष्टी करू शकतो. 
-								त्याचेच एक उदाहरण हे  की  आपण कापसाचे रोग जाणून त्यावर त्यावर उपाय काढतो.
+                                         CNN to classify diseases of the citrus leaf</h3>
+                                    <p>Experts help farmers to diagnose the citrus diseases by using agriculture laboratories or viewing the visual symptoms. These methods may not be accessible to all the farmers due to the expert’s cost and non-availability of laboratories. The proposed work presents the comparison of two different Convolutional Neural Network (CNN) architectures to classify diseases of the citrus leaf
                                     </p>
 
                                 </div>
@@ -259,15 +278,21 @@
     <section>
 
         <div class="container-fluid details">
-            <h1 class="text-center mt-5 ">Predict Cotton Crop Disease & Get Cure</h1>
-
-            <h2 class="text-center mt-4 mb-4" style="font-size: 2rem;">कपास के पेड कि तस्वीर डालिये</h2>
-            <form action="/predict" method="post" enctype="multipart/form-data" onsubmit="showloading()">
+            <h1 class="text-center mt-2 ">Predict Citrus Leaf Disease & Get Cure</h1>
+            <div class="row">
+            <div class="col-lg-6">
+            <h2 class="text-center mt-2 mb-2" style="font-size: 2rem;">Can predict 4 types of citrus diseases(Canker,Blackspot,Greening,Esca)</h2>
+            <form class="uploadform" action="/predict" method="post" enctype="multipart/form-data" onsubmit="showloading()">
 
                 <input type="file" name="image" class="upload">
                 <input type="submit" value="Predict">
 
             </form>
+            </div>
+            <div class="col-lg-6">
+                <img src="/static/images/culumn2.png" class="d-flex carouselimg" alt="...">
+            </div>
+            </div>
         </div>
     </section>
 
@@ -332,25 +357,6 @@
         </div>
 
     </section>
-
-
-    <section>
-        <div class="container Content-h5">
-
-            <h5 style="font-size: 1rem;" class="text-center my-3 contents">
-                Delivery Contact:
-                IndianAIProduction.business@gmail.com</h5>
-
-        </div>
-    </section>
-
-
-
-
-
-
-
-
 
 
 
